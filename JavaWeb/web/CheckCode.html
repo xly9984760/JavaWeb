@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <script>
+        window.onload = function () {
+            var img = document.getElementById("checkI");
+            var a = document.getElementById("checkA");
+
+            img.onclick = function () {
+                var date = new Date().getTime();
+                img.src = "/check?"+date;
+            };
+            a.onclick = function () {
+                var date = new Date().getTime();
+                img.src = "/check?"+date;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="checkI" src="/check"/>
+    <a id="checkA" href="">看不清换一张？</a>
+</body>
+</html>
